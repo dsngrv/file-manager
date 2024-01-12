@@ -24,7 +24,7 @@ final class SettingsViewController: UIViewController {
     private lazy var switcherLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = .black
         label.text = "Sort A-Z"
         label.font = .systemFont(ofSize: 24, weight: .regular)
         return label
@@ -80,7 +80,7 @@ final class SettingsViewController: UIViewController {
     }
  
     private func setupLayout() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         navigationItem.title = "Settings"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always

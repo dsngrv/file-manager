@@ -110,7 +110,7 @@ final class StartViewController: UIViewController {
     }
     
     private func setupLayout() {
-        view.backgroundColor = .black
+        view.backgroundColor = .systemGray
         [passwordField, button].forEach({view.addSubview($0)})
         
         NSLayoutConstraint.activate([

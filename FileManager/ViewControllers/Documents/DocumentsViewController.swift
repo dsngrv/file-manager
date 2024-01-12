@@ -19,8 +19,6 @@ final class DocumentsViewController: UIViewController {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
-        tableView.separatorColor = .white
-        tableView.separatorStyle = .singleLine
         tableView.separatorInset = .zero
         tableView.delegate = self
         tableView.dataSource = self
@@ -118,7 +116,7 @@ final class DocumentsViewController: UIViewController {
     }
     
     private func setupLayout() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         navigationItem.title = "Documents"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always

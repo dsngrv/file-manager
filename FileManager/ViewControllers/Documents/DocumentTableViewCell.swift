@@ -13,15 +13,15 @@ final class DocumentTableViewCell: UITableViewCell {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 17, weight: .semibold)
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 17, weight: .regular)
         return label
     }()
     
     private lazy var secondaryTextLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = .systemGray
         label.font = .systemFont(ofSize: 14, weight: .light)
         return label
     }()

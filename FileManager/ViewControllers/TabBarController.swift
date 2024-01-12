@@ -29,7 +29,7 @@ final class TabBarController: UITabBarController {
         settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 1)
         
         UITabBar.appearance().tintColor = .systemBlue
-        UITabBar.appearance().backgroundColor = .black
+        UITabBar.appearance().backgroundColor = .white
         
         setViewControllers([documentsNavController, settingsNavController], animated: true)
     }
