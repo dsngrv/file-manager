@@ -18,6 +18,14 @@ final class DocumentTableViewCell: UITableViewCell {
         return label
     }()
     
+    private lazy var secondaryTextLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 14, weight: .light)
+        return label
+    }()
+    
     private lazy var documentTypeImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -36,22 +44,30 @@ final class DocumentTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCell(name: String) {
+    func setupCell(name: String, type: String ,image: UIImage) {
         nameLabel.text = name
+        documentTypeImage.image = image
+        secondaryTextLabel.text = type
     }
     
     private func setupLayout() {
-        [nameLabel,documentTypeImage].forEach{ contentView.addSubview($0) }
+        [nameLabel, secondaryTextLabel, documentTypeImage].forEach{ contentView.addSubview($0) }
         
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: documentTypeImage.trailingAnchor, constant: 16),
-            nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            nameLabel.leadingAnchor.constraint(equalTo: documentTypeImage.trailingAnchor, constant: 8),
             nameLabel.widthAnchor.constraint(equalToConstant: 300),
             
-            documentTypeImage.topAnchor.constraint(equalTo: contentView.topAnchor),
+            secondaryTextLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
+            secondaryTextLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            secondaryTextLabel.leadingAnchor.constraint(equalTo: documentTypeImage.trailingAnchor, constant: 8),
+            
+            documentTypeImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            documentTypeImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
             documentTypeImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            documentTypeImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            documentTypeImage.heightAnchor.constraint(equalToConstant: 40),
+            documentTypeImage.widthAnchor.constraint(equalToConstant: 40)
+
         ])
     }
 }

@@ -17,6 +17,12 @@
 		0A0D564D2B496CE600F59E55 /* NavifationBar+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D564C2B496CE600F59E55 /* NavifationBar+Extention.swift */; };
 		0A0D564F2B496D0800F59E55 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D564E2B496D0800F59E55 /* FileService.swift */; };
 		0A0D56512B496D2F00F59E55 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0D56502B496D2F00F59E55 /* ShowImageViewController.swift */; };
+		0A0F59B32B4DAEAC008B4938 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F59B22B4DAEAC008B4938 /* StartViewController.swift */; };
+		0A0F59B52B4DB26D008B4938 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0F59B42B4DB26D008B4938 /* KeychainService.swift */; };
+		0A1B1FD42B4F170500FC6A0B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B1FD32B4F170500FC6A0B /* TabBarController.swift */; };
+		0A36BE492B4F177400C0F55E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36BE482B4F177400C0F55E /* SettingsViewController.swift */; };
+		0A36BE522B4F214600C0F55E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 0A36BE512B4F214600C0F55E /* KeychainAccess */; };
+		0AAA08E52B50657C00CBEFB4 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA08E42B50657C00CBEFB4 /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,11 @@
 		0A0D564C2B496CE600F59E55 /* NavifationBar+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavifationBar+Extention.swift"; sourceTree = "<group>"; };
 		0A0D564E2B496D0800F59E55 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		0A0D56502B496D2F00F59E55 /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
+		0A0F59B22B4DAEAC008B4938 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		0A0F59B42B4DB26D008B4938 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		0A1B1FD32B4F170500FC6A0B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0A36BE482B4F177400C0F55E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0AAA08E42B50657C00CBEFB4 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A36BE522B4F214600C0F55E /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,19 +76,56 @@
 		0A0D56332B496AC900F59E55 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
+				0A39F47D2B51546E00D69114 /* Services */,
+				0A39F47A2B5153E700D69114 /* ViewControllers */,
+				0A39F47C2B51545400D69114 /* Support */,
 				0A0D56342B496AC900F59E55 /* AppDelegate.swift */,
 				0A0D56362B496AC900F59E55 /* SceneDelegate.swift */,
-				0A0D564A2B496CBD00F59E55 /* Reusable.swift */,
-				0A0D56382B496AC900F59E55 /* DocumentsViewController.swift */,
-				0A0D56482B496C8B00F59E55 /* DocumentTableViewCell.swift */,
 				0A0D563D2B496ACB00F59E55 /* Assets.xcassets */,
 				0A0D563F2B496ACB00F59E55 /* LaunchScreen.storyboard */,
 				0A0D56422B496ACB00F59E55 /* Info.plist */,
-				0A0D564C2B496CE600F59E55 /* NavifationBar+Extention.swift */,
-				0A0D564E2B496D0800F59E55 /* FileService.swift */,
-				0A0D56502B496D2F00F59E55 /* ShowImageViewController.swift */,
 			);
 			path = FileManager;
+			sourceTree = "<group>";
+		};
+		0A39F47A2B5153E700D69114 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A39F47B2B51540100D69114 /* Documents */,
+				0A0F59B22B4DAEAC008B4938 /* StartViewController.swift */,
+				0A36BE482B4F177400C0F55E /* SettingsViewController.swift */,
+				0A1B1FD32B4F170500FC6A0B /* TabBarController.swift */,
+				0A0D56502B496D2F00F59E55 /* ShowImageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A39F47B2B51540100D69114 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				0A0D56382B496AC900F59E55 /* DocumentsViewController.swift */,
+				0A0D56482B496C8B00F59E55 /* DocumentTableViewCell.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		0A39F47C2B51545400D69114 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0A0D564C2B496CE600F59E55 /* NavifationBar+Extention.swift */,
+				0A0D564A2B496CBD00F59E55 /* Reusable.swift */,
+				0AAA08E42B50657C00CBEFB4 /* State.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0A39F47D2B51546E00D69114 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0A0D564E2B496D0800F59E55 /* FileService.swift */,
+				0A0F59B42B4DB26D008B4938 /* KeychainService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +144,9 @@
 			dependencies = (
 			);
 			name = FileManager;
+			packageProductDependencies = (
+				0A36BE512B4F214600C0F55E /* KeychainAccess */,
+			);
 			productName = FileManager;
 			productReference = 0A0D56312B496AC900F59E55 /* FileManager.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 0A0D56282B496AC900F59E55;
+			packageReferences = (
+				0A36BE502B4F214600C0F55E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 0A0D56322B496AC900F59E55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,12 +206,17 @@
 			files = (
 				0A0D56492B496C8B00F59E55 /* DocumentTableViewCell.swift in Sources */,
 				0A0D564F2B496D0800F59E55 /* FileService.swift in Sources */,
+				0A1B1FD42B4F170500FC6A0B /* TabBarController.swift in Sources */,
 				0A0D564D2B496CE600F59E55 /* NavifationBar+Extention.swift in Sources */,
 				0A0D56512B496D2F00F59E55 /* ShowImageViewController.swift in Sources */,
 				0A0D56392B496AC900F59E55 /* DocumentsViewController.swift in Sources */,
+				0A0F59B32B4DAEAC008B4938 /* StartViewController.swift in Sources */,
 				0A0D56352B496AC900F59E55 /* AppDelegate.swift in Sources */,
+				0A0F59B52B4DB26D008B4938 /* KeychainService.swift in Sources */,
+				0AAA08E52B50657C00CBEFB4 /* State.swift in Sources */,
 				0A0D56372B496AC900F59E55 /* SceneDelegate.swift in Sources */,
 				0A0D564B2B496CBD00F59E55 /* Reusable.swift in Sources */,
+				0A36BE492B4F177400C0F55E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +429,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A36BE502B4F214600C0F55E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A36BE512B4F214600C0F55E /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A36BE502B4F214600C0F55E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A0D56292B496AC900F59E55 /* Project object */;
 }
